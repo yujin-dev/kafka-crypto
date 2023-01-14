@@ -2,7 +2,8 @@ from binance.websocket.spot.websocket_client import SpotWebsocketClient as Webso
 
 class WebsocketStreams:
 
-    def __init__(self):
+    def __init__(self, callback):
+        self.callback = callback
         self.client = WebsocketClient()
         self.client.start()
 
@@ -11,23 +12,17 @@ class WebsocketStreams:
 
     def get_ticker(self, symbol:str):
 
-        def on_event(event):
-            print(event)
-
         self.client.mini_ticker(
             symbol=symbol,
             id=1,
-            callback=on_event
+            callback=self.callback
         )
 
     def subscribe(self, stream:list):
 
-        def on_event(event):
-            print(event["data"])
-
         self.client.instant_subscribe(
             stream=stream,
-            callback=on_event
+            callback=self.callback
         )
 
     def get_orderbook(self, symbols: list):
