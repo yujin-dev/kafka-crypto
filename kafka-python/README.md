@@ -1,3 +1,5 @@
+# Kafka with Python
+binance에서 코인 시세 데이터 받아오기
 
 ## TroubleShooting
 ```
