@@ -1,14 +1,13 @@
-# setup kafka cluster
+# Kafka Cluster
 
 ## Setup
+먼저 `docker-compose.yml`에서 {external-ip}를 broker의 외부 IP로 설정한다. 
+`docker-compose up -d`를 호출하여 클러스터를 띄운다.
 
-### docker-compose
-`docker-compose.yml`에서 {external-ip}를 broker의 외부 IP로 설정한다
-
-[ zookeeper를 포함하여 셋업하는 경우 ]  
-- `INTERNAL` : 도커 내부적으로 연결할 경우의 설정
-- `EXTERNAL` : 외부에서 연결할 경우의 설정
-- `LOCAL` : 로컬에서 연결할 경우의 설정
+### Kafka Listeners
+- `INTERNAL` : 도커 내부적으로 연결할 경우
+- `EXTERNAL` : 외부에서 연결할 경우
+- `LOCAL` : 로컬에서 연결할 경우
 
 
 ## Reference

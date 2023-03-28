@@ -1,5 +1,5 @@
-# Kafka with Go
-TCP로 수신되는 실시간 데이터 kafka producer, consumer
+# Kafka streaming - data from TCP ( Go )
+TCP로 수신되는 실시간 데이터 kafka producer, consumer를 구현해보자
 
 ## Setup
 ```
